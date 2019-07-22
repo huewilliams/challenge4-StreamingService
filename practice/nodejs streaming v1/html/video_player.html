@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Video Player</title>
+    </head>
+    <body>
+        <h1>Video Player</h1>
+        <video width="320" height="240" controls loop='true'>
+            <source src="http://localhost/video/christmas.mp4" type="video/mp4">
+        </video>
+    </body>
+    <script>
+        document.getElementsByTagName('video')[0].onended = function () {
+            this.load();
+            this.play();
+        }
+    </script>
+</html>
